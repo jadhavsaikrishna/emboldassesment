@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>embold</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<p>
+<div>
+<img src="emb.JPEG" alt="logo" >
+<hr>
+</div>
+</p>
+
+<table border="4" id="show">
+			<thead>
+				<tr>
+					<th>user Name</th>
+					<th>first Name</th>
+					<th>last name</th>
+					<th>Email</th>
+					
+				</tr>
+			</thead>
+		</table>
+<div class="headings">
+	<h2>New User Details  </h2>
+	<h2> profile picture </h2>
+
+</div>
+
+<hr>
+
+
+	<left>
+		
+			
+				<tr>
+					
+					<td><input type="text" name="uname" id="uname" placeholder="user name"></td>
+				</tr>
+			
+			
+				<tr>
+					<td><input type="text" name="email" id="email" placeholder="email"></td>
+				
+					
+				</tr>
+				
+				<br><br>	
+					<td><input type="text" name="fname" id="fname" placeholder="first name"></td>
+				
+					<tr>
+					<td><input type="text" name="lname" id="lname" placeholder="last name"></td>
+				</tr>
+				<br><br>
+
+                  
+		<div class="dropdown">
+  <button class="dropbtn" placeholder="role">Role</button>
+  <div class="dropdown-content">
+    <a >Admin</a>
+    <a > Developer</a>
+    <a > Manager, QA</a>
+    <a > QA</a>
+  </div>
+</div>
+
+
+        <input type="file" id="file" accept="image/*">
+       <z> <label for="file">
+        	<i class="material-icon">
+        	   
+        	</i>
+        	select image
+        </label>
+      </z>    
+ 
+
+
+                      <br><br>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> Send email confirmation</label><br>
+			
+
+
+                 <br><br>
+				<tr id="btna">
+					<td colspan="2"><input type="button" name="button" id="btn" value="Add User"  onclick="AddRow()"></td>
+					<input type="button" value="Cancel" onclick="reset()"  id="cancelbtn">
+				</tr>
+                
+		
+
+		
+		
+	<script>
+		
+		var list1 = [];
+		var list2 = [];
+		var list3 = [];
+		var list4 = [];
+
+		var n = 1;
+		var x = 0;
+
+		function AddRow(){
+
+			var AddRown = document.getElementById('show');
+			var NewRow = AddRown.insertRow(n);
+
+			list1 = document.getElementById("uname").value;
+			list2 = document.getElementById("fname").value;
+			list3 = document.getElementById("lname").value;
+			list4 = document.getElementById("email").value;
+			// cancel=document.getElementById("cancelbtn")
+			// cancel.addEventListner("click",reset)
+			
+			
+
+			var cel1 = NewRow.insertCell(0);
+			var cel2 = NewRow.insertCell(1);
+			var cel3 = NewRow.insertCell(2);
+			var cel4 = NewRow.insertCell(3);
+
+			cel1.innerHTML = list1;
+			cel2.innerHTML = list2;
+			cel3.innerHTML = list3;
+			cel4.innerHTML = list4;
+
+			n++;
+			x++;
+		}
+
+        var list5 = document.getElementById("uname");
+			var list6 = document.getElementById("fname");
+			var list7 = document.getElementById("lname");
+			var list8 = document.getElementById("email");
+
+		function reset(){
+			console.log("clickedme")
+			list5.value = "";
+			list6.value = "";
+			list7.value = "";
+			list8.value = "";
+
+		}
+
+
+	</script>
+
+</body>
+</html>
